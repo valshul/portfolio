@@ -1,0 +1,332 @@
+:root {
+    --color-accent: #da4143;
+    --color1: #f6f8e7;
+    --color2: #dbeeb2;
+    --color3: #7fad71;
+    --color4: #2c4a32;
+}
+
+body {
+    background-color: var(--color1);
+    color: var(--color4);
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+button {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* header */
+
+.app-header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.app-header .icon-and-title {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.app-header .icon-and-title .title {
+    color: var(--color5);
+    font-size: 27px;
+    /* padding: 8px; */
+    width: 300px;
+    /* height: 100px; */
+    justify-content: left;
+    margin-left: 5px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.app-header .icon-and-title .icon {
+    width: 50px;
+}
+
+.app-header .links {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.app-header a {
+    color: var(--color3);
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.app-header a:hover {
+    color: var(--color4);
+}
+
+.app-header a:active {
+    color: var(--color2);
+}
+
+/* sidebar */
+
+.app-sidebar {
+    background-color: white;
+    width: 420px;
+    height: calc(100% - (50px + 2 * 8px));
+    position: fixed;
+    top: 50px;
+    padding: 8px;
+}
+
+/* sample search */
+
+.sample-search {
+    background-color: var(--color1);
+    color: var(--color3);
+    width: calc(100% - 2 * 8px);
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+.sample-search::placeholder {
+    color: var(--color3);
+    opacity: 1;
+}
+
+/* sample */
+
+.sample-container {
+    height: calc(100% - (2 * 34px) - (2 * 8px));
+    overflow-y: scroll;
+}
+
+.sample {
+    background-color: var(--color1);
+    font-size: 16px;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.sample .filter {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.sample .filter-settings {
+    width: 100%;
+    margin: 8px;
+}
+
+.sample .filter-settings .ant-select-selector {
+    width: 100%;
+}
+
+.ant-tree-select-dropdown div {
+    /* Выглядит лучше, когда используется моноширный шрифт. 
+       Однако, следует найти какой-то более яркий (не бледный) вариант.*/
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* main thing, instrument container, instrument */
+
+.app-main {
+    /* background-color: magenta; */
+    float: right;
+    width: calc(100% - (420px + 4 * 8px));
+    height: calc(100% - 50px);
+    position: fixed;
+    top: 50px;
+    left: calc(420px + 2 * 8px);
+    padding: 0 8px;
+}
+
+.instrument-container {
+    width: 100%;
+    height: calc(100% - 34px - (3 * 8px));
+    padding-right: 8px;
+    overflow-y: scroll;
+}
+
+.instrument-result-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding-right: 16px;
+}
+
+.result-content {
+    margin-bottom: 20px;
+}
+
+.result-content .image {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.result-content .error {
+    color: var(--color-accent);
+    font-weight: bold;
+    text-align: center;
+}
+
+.instrument-result-container table,
+.instrument-result-container th,
+.instrument-result-container td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+.instrument-result-container .row-name {
+    text-align: left;
+    max-width: 500px;
+}
+
+.instrument-result-container td {
+    text-align: right;
+    min-width: 40px;
+    font-size: 14px;
+}
+
+.table-header {
+    /* font-weight: bold; */
+    font-style: italic;
+    font-size: 16px;
+}
+
+.instrument {
+    background-color: var(--color1);
+    font-size: 16px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+.instrument-type {
+    display: flex;
+    align-items: center;
+}
+
+.instrument-type h6 {
+    min-width: 150px;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.instrument-type .select {
+    width: 100%;
+}
+
+.instrument-type .start-bttn {
+    background-color: transparent;
+    color: var(--color3);
+    min-width: 110px;
+    border: none;
+}
+
+.instrument-type .start-bttn:hover {
+    color: var(--color4);
+}
+
+.instrument-panel {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    padding: 8px;
+}
+
+.instrument-settings-entry {
+    align-self: start;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    /* column-gap: 8px; */
+    /* row-gap: 4px; */
+}
+
+.instrument-settings-entry .tooltip {
+    width: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 1380px) {
+    .instrument-settings-entry{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .instrument-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .app-sidebar {
+        width: 300px;
+    }
+
+    .instrument-container {
+        width: calc(100% - (300px + 4 * 8px));
+    }
+}
+
+/* create sample/instrument buttons */
+
+.create-bttn {
+    background-color: white;
+    color: var(--color4);
+    width: 100%;
+    height: 34px;
+    border-radius: 50px;
+    border: 1px solid var(--color2);
+    margin: 8px 0;
+}
+
+.create-bttn:hover {
+    background-color: var(--color2);
+}
+
+.corner-bttn {
+    background-color: transparent;
+    color: var(--color3);
+    border: none;
+}
+
+.corner-bttn:first-child:hover {
+    color: var(--color4);
+}
+
+.corner-bttn:hover {
+    color: var(--color-accent);
+}
